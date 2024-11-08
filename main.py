@@ -8,7 +8,36 @@ load_dotenv()
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
 
-st.write("Michibiku: Your Japan Guide")
+st.markdown(
+    """
+    <style>
+    .main {
+        background-color: #1e1e1e;
+        color: #f5f5f5;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .stTextInput>div>div>input {
+        background-color: #333333;
+        color: #f5f5f5;
+        border: 1px solid #555555;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    .stButton>button {
+        background-color: #ff5c5c;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 5px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Main Title and Description
+st.title("🇯🇵 Michibiku: Your Japan Guide 🇯🇵")
+st.subheader("Get answers to your questions about Japan and explore its wonders!")
 
 with st.form("my_form"):
     question = st.text_input("Ask me anything about Japan")
