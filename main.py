@@ -16,7 +16,7 @@ with st.form("my_form"):
 
     if submit_button:
         response = agent_executor.invoke({"input": question})
-        st.write(response)
+        st.write(response["output"])
 
 # question = ""
 # while question != "exit":
