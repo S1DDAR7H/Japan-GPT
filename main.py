@@ -36,8 +36,7 @@ st.markdown(
 )
 
 # Main Title and Description
-st.title("🇯🇵 Michibiku: Your Japan Guide 🇯🇵")
-st.subheader("Get answers to your questions about Japan and explore its wonders!")
+st.title("Michibiku: Your Japan Guide")
 
 with st.form("my_form"):
     question = st.text_input("Ask me anything about Japan")
@@ -45,7 +44,7 @@ with st.form("my_form"):
 
     if submit_button:
         response = agent_executor.invoke({"input": question})
-        st.write(response["output"])
+        st.write(f"**Response:** {response['output']}")
 
 # question = ""
 # while question != "exit":
